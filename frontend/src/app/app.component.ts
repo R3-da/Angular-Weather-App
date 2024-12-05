@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   title = 'Weather App';
-  cities: any;
+  cities: unknown;
 
   constructor(private http: HttpClient) {}
 

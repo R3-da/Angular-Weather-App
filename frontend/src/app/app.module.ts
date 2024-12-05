@@ -47,20 +47,20 @@ const routes: Routes = [
   },
 ];
 
-@NgModule({ declarations: [
-        AppComponent,
-        NavbarComponent,
-        HomeComponent,
-        ManageComponent,
-        WeatherListComponent,
-        WeatherManagementComponent,
-        WeatherFormComponent,
-        WeatherChartComponent,
-        OpenWeatherComponent,
-    ],
-    bootstrap: [AppComponent], imports: [RouterModule.forRoot(routes),
-        BrowserModule,
-        ReactiveFormsModule,
-        FormsModule,
-        FontAwesomeModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
+@NgModule({
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    HomeComponent,
+    ManageComponent,
+    WeatherListComponent,
+    WeatherManagementComponent,
+    WeatherFormComponent,
+    WeatherChartComponent,
+    OpenWeatherComponent,
+  ],
+  bootstrap: [AppComponent],
+  imports: [RouterModule.forRoot(routes), BrowserModule, ReactiveFormsModule, FormsModule, FontAwesomeModule],
+  providers: [provideHttpClient(withInterceptorsFromDi())],
+})
 export class AppModule {}
