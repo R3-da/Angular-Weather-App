@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
@@ -47,27 +47,20 @@ const routes: Routes = [
   },
 ];
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    NavbarComponent,
-    HomeComponent,
-    ManageComponent,
-    WeatherListComponent,
-    WeatherManagementComponent,
-    WeatherFormComponent,
-    WeatherChartComponent,
-    OpenWeatherComponent,
-  ],
-  imports: [
-    RouterModule.forRoot(routes),
-    BrowserModule,
-    HttpClientModule,
-    ReactiveFormsModule,
-    FormsModule,
-    FontAwesomeModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        NavbarComponent,
+        HomeComponent,
+        ManageComponent,
+        WeatherListComponent,
+        WeatherManagementComponent,
+        WeatherFormComponent,
+        WeatherChartComponent,
+        OpenWeatherComponent,
+    ],
+    bootstrap: [AppComponent], imports: [RouterModule.forRoot(routes),
+        BrowserModule,
+        ReactiveFormsModule,
+        FormsModule,
+        FontAwesomeModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}
