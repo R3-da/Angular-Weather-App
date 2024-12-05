@@ -1,8 +1,17 @@
+import fluid, { extract, screens, fontSize } from 'fluid-tailwind';
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./src/**/*.{html,ts}"],
+  content: {
+
+  files:["./src/**/*.{html,ts}",],
+  extract,
+
+  },
   theme: {
     extend: {},
+    screens,
+		fontSize,
   },
-  plugins: [],
+  plugins: [fluid],
 };
