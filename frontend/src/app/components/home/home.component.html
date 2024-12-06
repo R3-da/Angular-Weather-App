@@ -1,29 +1,70 @@
-<div class="bg-gray-200 h-full min-h-screen flex flex-col items-center justify-start">
+<div class="flex h-full min-h-screen flex-col items-center justify-start bg-slate-900">
   <!-- Logo Section -->
-  <div class="flex justify-center items-center p-4">
-    <i class="fa-brands fa-angular fa-8x"></i>
+  <div class="mb-16 mt-8 flex items-center justify-center gap-8">
+    <img src="/assets/images/angular-logo.svg" alt="Angular Logo" class="h-32 w-32" />
+    <img src="/assets/images/tailwindcss-logo.svg" alt="Tailwind CSS Logo" class="h-32 w-32" />
   </div>
   <!-- Content Section -->
-  <div class="flex items-stretch justify-center p-16 w-full gap-8">
-      <!-- Card 1 -->
-      <div class="text-center">
-        <h1 class="font-medium text-slate-900 text-xl">Old</h1>
-        <h1 class="font-medium text-slate-900 text-xl">Old
-          
+  <div class="flex w-full flex-col items-stretch justify-center gap-8">
+    <!-- New: Fluid Tailwind CSS -->
+    <div class="relative text-center ~/lg:~mx-0/32">
+      <!-- Number Circle -->
+      <div class="flex flex-row items-center ~/lg:~gap-2/4 ~/lg:~pb-4/8">
+        <h1 class="font-bold ~/lg:~text-lg/4xl">
+          <span class="text-white">1</span>
+          <span class="text-teal-300">.</span>
         </h1>
-        <div class="bg-white p-6 rounded-lg shadow-lg flex-1 text-center h-full">
-          <h2 class="font-medium text-slate-900 text-xl">Using Classic Breakpoints</h2>
-          <p class="text-slate-600 mt-2">This is the first card description.</p>
-        </div>
+        <h1 class="font-semibold text-teal-300 ~/lg:~text-lg/4xl">Using the New Fluid for Tailwind CSS</h1>
       </div>
 
-      <!-- Card 2 -->
-      <div>
-        <h1 class="font-medium text-slate-900 text-xl">New</h1>
-      <div class="bg-white p-6 rounded-lg shadow-lg flex-1 text-center h-full">
-          <h2 class="font-medium text-slate-900 text-xl">Using Fluid for Tailwind</h2>
-          <p class="text-slate-600 mt-2">This is the second card description.</p>
+      <div class="grid grid-cols-2 ~/lg:~gap-2/16">
+        <!-- Card 1 -->
+        <div class="flex rounded-lg border-2 border-teal-300">
+          <div class="flex h-full w-full flex-col justify-between rounded-lg bg-slate-800 p-6 shadow-lg">
+            <h2 class="truncate font-medium text-indigo-100 ~/lg:~text-sm/3xl">SMOOTH !</h2>
+            <p class="mt-2 truncate text-slate-600 ~/lg:~text-sm/xl">Ad elit commodo eiusmod exercitation consectetur.</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="flex rounded-lg border-2 border-teal-300">
+          <div class="flex h-full w-full flex-col justify-between rounded-lg bg-slate-800 p-6 shadow-lg">
+            <h2 class="truncate font-medium text-indigo-100 ~/lg:~text-sm/3xl">SMOOTH !</h2>
+            <p class="mt-2 truncate text-slate-600 ~/lg:~text-sm/xl">Nisi voluptate ipsum non quis ipsum anim magna.</p>
+          </div>
+        </div>
       </div>
+    </div>
+
+    <!-- Spacer Line -->
+    <hr class="mx-16 my-8 border-t border-teal-500" />
+    <!-- Horizontal line spacer -->
+
+    <!-- Old: Classic Breakpoints -->
+    <div class="relative mx-0 text-center sm:mx-8 md:mx-16 lg:mx-32">
+      <!-- Number Circle -->
+      <div class="flex flex-row items-center gap-2 pb-4 lg:gap-4 lg:pb-8">
+        <h1 class="text-lg font-bold sm:text-2xl md:text-3xl lg:text-4xl">
+          <span class="text-white">2</span>
+          <span class="text-teal-300">.</span>
+        </h1>
+        <h1 class="text-lg font-semibold text-teal-300 sm:text-2xl md:text-3xl lg:text-4xl">Using the Classic Breakpoints Way</h1>
       </div>
+      <div class="grid grid-cols-2 gap-2 md:gap-8 lg:gap-16">
+        <!-- Card 1 -->
+        <div class="flex rounded-lg border-2 border-teal-300">
+          <div class="flex h-full w-full flex-col justify-between rounded-lg bg-slate-800 p-6 shadow-lg">
+            <h2 class="truncate text-sm font-medium text-indigo-100 sm:text-xl md:text-2xl lg:text-3xl">A BIT CHOPPY !</h2>
+            <p class="mt-2 truncate text-sm text-slate-600 lg:text-xl">Ex sit nostrud consequat voluptate duis anim.</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="flex rounded-lg border-2 border-teal-300">
+          <div class="flex h-full w-full flex-col justify-between rounded-lg bg-slate-800 p-6 shadow-lg">
+            <h2 class="truncate text-sm font-medium text-indigo-100 sm:text-xl md:text-2xl lg:text-3xl">A BIT CHOPPY !</h2>
+            <p class="mt-2 truncate text-sm text-slate-600 lg:text-xl">Est adipisicing ea enim quis irure amet officia ut.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>
